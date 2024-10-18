@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Busca de centros hospitalares próximas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            height: 400px;
+            width: 90%;
+        }
+        #ubsList {
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20px;
+            color: #faa0cc;
+        }
+
+        /* Centralizando o formulário de busca por CEP */
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 1em;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #faa0cc;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e68ca6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_hackathon_brancasvg.svg" alt="Toque Rosa Logo">
+        </div>
+        <h3 class="titulo">Conscientização sobre Câncer de Mama</h3>
+        <nav>
+            <ul class="opcoes">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../autoexame/indexAutExam.html">Autoexame</a></li>
+                <li><a href="index.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Buscar centros de saúde próximos</h1>
+    
+    <form id="cepForm">
+        <label for="cep">Insira seu CEP:</label>
+        <input type="text" id="cep" name="cep" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="map"></div>
+
+    <div id="ubsList"></div>
+
+    <footer>
+        <p>&copy; 2024 Toque Rosa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo8036wimZvcfPCTkKxXTiFz1YLBbibZc&libraries=places"
+      defer
+    ></script>
+
+    <script src="script.js"></script> 
+</body>
+</html>

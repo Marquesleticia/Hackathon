@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Toque Rosa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo_hackathon_brancasvg.svg" alt="Toque Rosa Logo">
+
+        </div>
+        <h3 class="titulo">Conscientização sobre Câncer de Mama</h3>
+        <nav>
+
+            <ul class="opcoes">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="autoexame/indexAutExam.html">Autoexame</a></li>
+                <li><a href="api/index.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="carousel-container">
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+
+        <div class="carousel-slides">
+            <div class="carousel-slide slide-1">
+                <img src="img/Corpo1.png" alt="">
+            </div>
+            <div class="carousel-slide slide-2">
+                <img src="img/Corpo2.png" alt="">
+            </div>
+            <div class="carousel-slide slide-3">
+                <img src="img/Corpo3.png" alt="">
+            </div>
+        </div>
+
+        <div class="carousel-navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+
+        <div class="carousel-arrow carousel-arrow-left" onclick="moveSlide(-1)">&#10094;</div>
+        <div class="carousel-arrow carousel-arrow-right" onclick="moveSlide(1)">&#10095;</div>
+    </div>
+
+    <main>
+        
+        <section id="sobre" class="centralizar">
+            <h3>O que é o Câncer de Mama?</h3>
+            <p>O câncer de mama é uma doença resultante da multiplicação descontrolada de células anormais na mama, formando um tumor maligno. Ele pode se desenvolver tanto em mulheres quanto em homens, embora seja muito mais comum em mulheres. Existem diversos tipos de câncer de mama, que variam de acordo com a velocidade de crescimento e a forma de disseminação das células cancerígenas.</p>
+            <p>O diagnóstico precoce é fundamental para aumentar as chances de cura, por isso é essencial estar atento aos sinais e realizar exames regulares, como a mamografia.</p>
+        </section>
+
+        <section id="sintomas" class="centralizar">
+            <h3>Sintomas e Sinais de Alerta</h3>
+            <ul>
+                <li><strong>Nódulo (caroço) na mama:</strong> geralmente indolor e de consistência firme.</li>
+                <li><strong>Alterações no formato ou no tamanho da mama.</strong></li>
+                <li><strong>Alterações na pele da mama:</strong> presença de retração, enrugamento ou vermelhidão.</li>
+                <li><strong>Secreção no mamilo:</strong> especialmente se for sanguinolenta.</li>
+                <li><strong>Inchaço ou nódulo na axila:</strong> pode indicar que o câncer se espalhou.</li>
+                <li><strong>Dor na mama ou no mamilo:</strong> deve ser investigada se persistente.</li>
+            </ul>
+        </section>
+
+        <section id="tratamentos" class="centralizar">
+            <h3>Tratamentos Disponíveis</h3>
+            <p>O tratamento do câncer de mama pode variar dependendo do estágio da doença e das características da paciente. As principais opções incluem:</p>
+            <ul>
+                <li><strong>Cirurgia:</strong> remoção parcial ou total da mama.</li>
+                <li><strong>Radioterapia:</strong> para destruir células cancerígenas remanescentes.</li>
+                <li><strong>Quimioterapia:</strong> uso de medicamentos para combater as células cancerígenas.</li>
+                <li><strong>Terapia hormonal:</strong> indicada para cânceres sensíveis a hormônios.</li>
+                <li><strong>Terapia-alvo:</strong> medicamentos específicos que atacam as células cancerígenas.</li>
+            </ul>
+        </section>
+
+        <section id="outubro-rosa" class="centralizar">
+            <h3>Outubro Rosa e Datas Importantes</h3>
+            <p>Outubro Rosa é uma campanha internacional de conscientização sobre o câncer de mama. A principal data inclue:</p>
+            <ul>
+                <li><strong>19º de outubro:</strong> Dia Internacional da Luta contra o Câncer de Mama.</li>
+            </ul>
+            <p>Diversas ações são realizadas durante todo o mês para sensibilizar a população, como mutirões de mamografia e eventos de conscientização.</p>
+        </section> 
+
+    </main>
+     <!-- Botão de alternância do chatbot -->
+     <div id="chatbot-toggle" onclick="toggleChat()">
+        <img src="img/chatbox_transparentsvg.svg" alt="Chat">
+    </div>
+    
+    <!-- Caixa de chat -->
+    <div id="chatbox">
+        <div id="history"></div>
+        <input type="text" id="message-input" placeholder="Digite sua pergunta..." />
+        <div class="button-container">
+            <button id="btn-clear">Limpar</button>
+            <button id="btn-submit">Enviar</button>
+        </div>
+    </div>
+    
+   
+    <footer>
+        <p>&copy; 2024 Toque Rosa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

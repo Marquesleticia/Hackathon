@@ -1,0 +1,405 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centraliza todo o conteúdo horizontalmente */
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #faa0cc;
+    color: #fff;
+    padding: 0.1%; 
+    border-bottom-left-radius: 13px;  
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 60px; 
+    height: auto;
+    margin-left: 6vh;
+}
+
+.titulo {
+    flex: 1;
+    text-align: center; 
+    font-size: 1.4em;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-family: 'Trebuchet MS', sans-serif; 
+}
+
+
+nav {
+    flex: 0 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.opcoes{
+    margin-right: 7vh;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', sans-serif;
+    
+}
+
+.opcoes li{
+    margin-right: 25px;
+}
+
+/* Seções */
+main {
+    max-width: 800px; /* Limita a largura do conteúdo para melhor legibilidade */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h3 {
+    color: #e60073;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+section ul, section ol {
+    text-align: left; /* Mantém listas alinhadas à esquerda para melhor leitura */
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+section p {
+    margin-top: 10px;
+    text-align: justify; /* Justifica o texto para melhorar a estética */
+}
+
+/* Footer */
+footer {
+    background-color: #faa0cc;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Estilo para o contêiner de botões */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Espaço igual entre os botões */
+    margin-top: 10px; /* Espaço acima dos botões */
+}
+
+/* Estilos do botão de enviar e limpar */
+#btn-submit,
+#btn-clear {
+    background-color: #f5e0e7; /* Cor de fundo semelhante */
+    color: #333; /* Cor do texto */
+    border: none; /* Remover bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Mudar o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para o fundo */
+    margin-right: 5px; /* Margem direita para o botão de enviar */
+}
+
+/* Remover a margem do último botão */
+#btn-clear {
+    margin-right: 0; /* Remove a margem direita do botão de limpar */
+}
+
+/* Efeito hover para os botões */
+#btn-submit:hover,
+#btn-clear:hover {
+    background-color: #f8cdd1; /* Cor de fundo ao passar o mouse */
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1050px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    margin-top: 30px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.7s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.slide-1 { background-color: #ffffff; }
+.slide-2 { background-color: #f6f6f6; }
+.slide-3 { background-color: #f5f5f5; }
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .carousel-slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-slides {
+    transform: translateX(-200%);
+}
+
+.carousel-navigation {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.carousel-navigation label {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #555;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow-left {
+    left: 10px;
+}
+
+.carousel-arrow-right {
+    right: 10px;
+}
+
+/* Botão de Alternância do Chatbot */
+#chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f5cfe1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#chatbot-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilo do Chatbox */
+#chatbox {
+    width: 400px; /* Aumente a largura */
+    height: 500px; /* Aumente a altura */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #ffe6f2;
+    border: 1px solid #eed3e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#chatbox.hidden{
+    display: none;
+}
+
+#chatbox #history {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #fff0f6;
+    border: 1px solid #fcdee9;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-height: 400px;
+}
+
+#message-input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #eed3e0;
+    border-radius: 5px;
+}
+
+#btn-submit {
+    background-color: #f5e0e7;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Mostrar/Ocultar Chatbox */
+.hidden {
+    display: none;
+}
+
+/* Estilos para as mensagens do usuário */
+.user-message {
+    background-color: #d1e7dd;
+    color: #155724;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-align: right;
+    width: fit-content;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+/* Estilos para as respostas do chatbot */
+.bot-response {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-align: left;
+    width: fit-content;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+/* Estilo para o histórico de conversas */
+#history {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Estilo dos botões de perguntas sugeridas */
+.suggestions-container button {
+    background-color: #f5cfe1;
+    color: #333;
+    border: 1px solid #eed3e0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.suggestions-container button:hover {
+    background-color: #f8cdd1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li { 
+        margin: 10px 0;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    .titulo {
+        margin-top: 10px;
+    }
+}

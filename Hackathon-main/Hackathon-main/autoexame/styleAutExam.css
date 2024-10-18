@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #faa0cc;
+    color: #fff;
+    padding: 0.1%; 
+    border-bottom-left-radius: 13px;  
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 60px; 
+    height: auto;
+    margin-left: 6vh;
+}
+
+.titulo {
+    flex: 1;
+    text-align: center; /* Centraliza o texto dentro do espaço reservado */
+    font-size: 1.4em;
+    position: absolute; /* Usa posicionamento absoluto */
+    left: 50%; /* Posiciona o centro do elemento no meio da página */
+    transform: translateX(-50%); /* Ajusta o deslocamento horizontal */
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+
+nav {
+    flex: 0 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.opcoes{
+    margin-right: 7vh;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.opcoes li{
+    margin-right: 25px;
+}
+
+/* Ajusta o espaçamento entre o vídeo e o texto */
+.container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    gap: 60px; 
+    padding: 20px;
+}
+
+.container video {
+    width: 40%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 2px solid #faa0cc; 
+    padding: 10px; 
+    background-color: #fff; 
+}
+
+.container .texto {
+    width: 55%; 
+    padding-right: 20px; 
+}
+
+.texto h3, .texto h4 {
+    color: #e60073;
+    font-weight: bold; 
+}
+
+.texto p {
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    font-size: 1.1em; 
+    text-align: justify; 
+}
+
+.texto ol, .texto ul {
+    margin-left: 20px; 
+    margin-bottom: 20px; 
+}
+
+.texto li {
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+}
+
+.texto strong {
+    color: #333; 
+    font-weight: bold; 
+}
+
+main {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+main h2 {
+    color: #e60073;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #faa0cc;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}

@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centraliza todo o conteúdo horizontalmente */
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #faa0cc;
+    color: #fff;
+    padding: 0.1%; 
+    border-bottom-left-radius: 13px;  
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 60px; 
+    height: auto;
+    margin-left: 6vh;
+}
+
+.titulo {
+    flex: 1;
+    text-align: center; /* Centraliza o texto dentro do espaço reservado */
+    font-size: 1.4em;
+    position: absolute; /* Usa posicionamento absoluto */
+    left: 50%; /* Posiciona o centro do elemento no meio da página */
+    transform: translateX(-50%); /* Ajusta o deslocamento horizontal */
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+
+nav {
+    flex: 0 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.opcoes{
+    margin-right: 7vh;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.opcoes li{
+    margin-right: 25px;
+}
+
+/* Estilos do Formulário e Mapa */
+form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #faa0cc;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68ca6;
+}
+
+footer {
+    background-color: #faa0cc;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 26px;
+    width: 100%;
+}
+
+#map {
+    height: 350px; 
+    width: 90%; 
+    margin: 30px auto; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+#ubsList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#ubsList div {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#ubsList h3 {
+    color: #faa0cc;
+    margin-bottom: 5px;
+}
+
+#ubsList p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li { 
+        margin: 10px 0;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    .titulo {
+        margin-top: 10px;
+    }
+}
+
